@@ -1,7 +1,7 @@
 import './App.css';
 import InformationNav from './Components/Header/InformationNav';
 import Menu from './Components/Menu/Menu';
-import ScrollImage from './Components/ScrollImage/ScrollImage';
+import ImageProduct from './Components/ImageProduct/ImageProduct';
 
 function App() {
   return (
@@ -10,8 +10,8 @@ function App() {
         <InformationNav />
         <Menu />
       </header>
-      <div>
-        <ScrollImage />
+      <div className='body'>
+        <ImageProduct />
       </div>
     </div>
   );
