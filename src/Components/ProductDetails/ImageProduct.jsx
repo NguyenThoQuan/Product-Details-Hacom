@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ScrollImage from "./ScrollImage";
+import ProductDetails from "./ProductDetails";
 import "../../Styles/ImageProduct.scss"
 
 export default function ImageProduct() {
@@ -17,6 +18,7 @@ export default function ImageProduct() {
     return (
         <div className="image-product">
             <ScrollImage images={images} />
+            <ProductDetails />
         </div>
     )
 }

@@ -1,7 +1,7 @@
 import './App.css';
 import InformationNav from './Components/Header/InformationNav';
 import Menu from './Components/Menu/Menu';
-import ImageProduct from './Components/ImageProduct/ImageProduct';
+import ImageProduct from './Components/ProductDetails/ImageProduct';
 
 function App() {
   return (
