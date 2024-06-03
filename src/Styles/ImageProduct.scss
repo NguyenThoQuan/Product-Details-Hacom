@@ -308,6 +308,104 @@
         .buy {
             div {
                 display: flex;
+                align-items: center;
+                gap: 15px;
+            }
+
+            .quantity {
+                div {
+                    .add-quantity {
+                        font-weight: 700;
+                        font-size: 18px;
+                    }
+
+                    div {
+                        display: flex;
+                        align-items: center;
+                        gap: 5px;
+                        border: 1px solid #9f9f9f;
+                        border-radius: 10px;
+                        font-size: 18px;
+
+                        span {
+                            display: inline-block;
+                            transform: translateY(-2.5px);
+                        }
+
+                        button {
+                            border: none;
+                            border-radius: 10px;
+                            background-color: #FFF;
+                            cursor: pointer;
+                            font-size: 24px;
+                        }
+                    }
+                }
+
+                .add-cart {
+                    border: 1px solid #f43453;
+                    font-weight: 700;
+                    color: #f43453;
+                    border-radius: 5px;
+                    padding: 3px 30px;
+                    width: 21%;
+                    height: 100%;
+                    background-color: #ffeff2;
+                    cursor: pointer;
+                }
+
+                .save {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 5px;
+                    background-color: #ffeff2;
+                    color: #f43453;
+                    padding: 3px 30px;
+                    border: 1px solid #f43453;
+
+                    span {
+                        display: inline-block;
+                    }
+                }
+            }
+
+            .buy-now {
+                margin-top: 10px;
+                width: 100%;
+
+                button {
+                    width: 100%;
+                    border: none;
+                    border-radius: 5px;
+                    background-color: #f43453;
+                    color: #FFF;
+                    padding: 15px 0px;
+                    font-size: 18px;
+                    font-weight: 700;
+                }
+            }
+
+            .installment {
+                margin-top: 10px;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                button {
+                    padding: 10px 0px;
+                    width: 50%;
+                    border: none;
+                    border-radius: 5px;
+                    background-color: #1f67d2;
+                    color: #FFF;
+
+                    span:nth-child(1) {
+                        font-weight: 700;
+                        font-size: 16px;
+                    }
+                }
             }
         }
     }

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Heart, HeartFill, Handbag } from "react-bootstrap-icons";
+import { Heart, HeartFill, Handbag, Plus, Dash } from "react-bootstrap-icons";
+import { toast } from "react-toastify";
 
 export default function Buy() {
     const [quantity, setQuantity] = useState(1);
@@ -11,19 +12,27 @@ export default function Buy() {
         }
     }
 
+    const handleAddCart = () => {
+        localStorage.setItem("promotion", "17.999.000đ");
+        localStorage.setItem("quantity", "1");
+        toast.success("Thêm vào giỏ hàng thành công !!!")
+    }
+
     return (
         <div className="buy">
             <div className="quantity">
-                <span>Số lượng: </span>
                 <div>
-                    <button onClick={() => setQuantity(quantity + 1)}>+</button>
-                    <span>{quantity}</span>
-                    <button onClick={handleReduced}>-</button>
+                    <span className="add-quantity">Số lượng: </span>
+                    <div>
+                        <button onClick={() => setQuantity(quantity + 1)}><Plus className="icon" /></button>
+                        <span>{quantity}</span>
+                        <button onClick={handleReduced}><Dash className="icon" /></button>
+                    </div>
                 </div>
-                <div>
-                    <span>THÊM VÀO GIỎ HÀNG</span>
+                <div className="add-cart" onClick={handleAddCart}>
+                    <span>THÊM VÀO GIỎ</span>
                 </div>
-                <div onClick={() => setClickSave(!clickSave)}>
+                <div className="save" onClick={() => setClickSave(!clickSave)}>
                     {
                         !clickSave ?
                             <><Heart /><span>Lưu</span></>
@@ -33,7 +42,7 @@ export default function Buy() {
                 </div>
             </div>
             <div className="buy-now">
-                <button><Handbag /> Mua ngay</button>
+                <button><Handbag /> <span>Mua ngay</span></button>
             </div>
             <div className="installment">
                 <button>

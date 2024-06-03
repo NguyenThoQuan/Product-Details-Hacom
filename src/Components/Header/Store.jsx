@@ -2,16 +2,6 @@ import React, { useState } from "react";
 import { createPortal } from "react-dom";
 import { Telephone, ChevronDown } from "react-bootstrap-icons";
 
-let allContentStore = document.getElementById("all-content-store");
-
-if (!allContentStore) {
-    const allContentStoreDiv = document.createElement("div");
-    allContentStoreDiv.id = "all-content-store";
-    allContentStoreDiv.className = "all-content-store";
-    document.body.appendChild(allContentStoreDiv);
-    allContentStore = allContentStoreDiv;
-}
-
 export default function Store() {
     const [hoverStore1, setHoverStore1] = useState(false);
     const [hoverStore2, setHoverStore2] = useState(false);
@@ -32,7 +22,7 @@ export default function Store() {
                             <div onMouseEnter={() => setHoverStore1(true)} onMouseLeave={() => setHoverStore1(false)}>
                                 <span>Mua hàng Online</span>
                             </div>
-                        </div>, allContentStore
+                        </div>, document.body
                     )
                 }
             </div>

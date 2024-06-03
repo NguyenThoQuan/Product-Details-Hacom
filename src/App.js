@@ -2,6 +2,9 @@ import './App.css';
 import InformationNav from './Components/Header/InformationNav';
 import Menu from './Components/Menu/Menu';
 import ImageProduct from './Components/ProductDetails/ImageProduct';
+import Parameters from './Components/Parameters/Parameters';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
@@ -10,8 +13,21 @@ function App() {
         <InformationNav />
         <Menu />
       </header>
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
       <div className='body'>
         <ImageProduct />
+        <Parameters />
       </div>
     </div>
   );
