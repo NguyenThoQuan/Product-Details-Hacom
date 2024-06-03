@@ -8,6 +8,23 @@
     align-items: center;
     padding: 15px 0px;
 
+    .new-menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        padding: 5px;
+        background-color: #c1daff;
+        font-weight: 700;
+        border-radius: 10px;
+        font-size: 18px;
+        color: #1f67d2;
+    }
+
+    img {
+        display: none;
+    }
+
     .search {
         display: flex;
         align-items: center;
