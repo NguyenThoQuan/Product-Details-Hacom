@@ -192,10 +192,14 @@
 }
 
 .list-menu {
-    position: absolute;
+    text-align: center;
+    position: fixed;
     background-color: #1436c1;
     color: #FFF;
     bottom: 0%;
+    width: 15%;
+    height: 90%;
+    border-radius: 10px 10px 0px 0px;
 }
 
 .none {
@@ -204,4 +208,9 @@
 
 .block {
     display: block;
+}
+
+.option-support,
+.option-service-center {
+    z-index: 1000;
 }

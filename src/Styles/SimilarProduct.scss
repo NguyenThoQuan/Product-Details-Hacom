@@ -29,6 +29,7 @@
         margin-top: 15px;
 
         .SM {
+            position: relative;
             width: 20%;
             border: 1px solid #1f67d2;
             border-radius: 10px;
@@ -144,6 +145,62 @@
                                 height: 10%;
                             }
                         }
+                    }
+                }
+            }
+
+            .hover-similar {
+                position: fixed;
+                top: 13%;
+                z-index: 1000;
+
+                .hover-similar-content {
+                    width: 320px;
+                    border: 1px solid black;
+                    border-radius: 15px;
+                    background-color: #FFF;
+                    transform: translateX(300px);
+
+                    .name {
+                        display: inline-block;
+                        background: linear-gradient(90deg, #1f67d2, #f43453);
+                        border-radius: 15px 15px 0px 0px;
+                        padding: 15px 10px;
+                        color: #FFF;
+                        font-weight: 700;
+                    }
+
+                    .hover-details {
+                        padding: 15px 15px;
+
+                        .span-1,
+                        .span-3,
+                        .span-5 {
+                            font-weight: 700;
+                        }
+
+                        .span-4 {
+                            font-weight: 700;
+                            color: #f43453;
+                        }
+
+                        .vat {
+                            font-size: 10px;
+                        }
+                    }
+
+                    .title {
+                        width: 55%;
+                        margin: 0px 15px;
+                        color: #FFF;
+                        background-color: #1f67d2;
+                        padding: 5px 15px;
+                        border-radius: 10px;
+                    }
+
+                    .info-product {
+                        padding: 5px 15px;
+                        font-size: 12px;
                     }
                 }
             }
