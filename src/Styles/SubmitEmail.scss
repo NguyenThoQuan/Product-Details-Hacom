@@ -1,0 +1,28 @@
+.submit-email {
+    margin-top: 20px;
+    width: 100%;
+    color: #FFF;
+    background-color: #202c43;
+    text-align: center;
+    padding: 20px 0px;
+
+    div {
+        input {
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px 0px 0px 5px;
+            width: 50%;
+        }
+
+        button {
+            border: none;
+            background-color: #ed1b24;
+            color: #FFF;
+            border-radius: 0px 5px 5px 0px;
+            cursor: pointer;
+            font-size: 14px;
+            padding: 10px 30px;
+            width: 10%;
+        }
+    }
+}

@@ -6,7 +6,7 @@ import "../../Styles/Parameters.scss";
 export default function Parameters() {
     const [parameter] = useState([
         { label: "Hãng sản xuất", data: "Acer" },
-        { label: "Churng loại", data: "Aspire 7 A715-76G-59MW– model giải trí, gaming" },
+        { label: "Chủng loại", data: "Aspire 7 A715-76G-59MW– model giải trí, gaming" },
         { label: "Part Number", data: "NH.QMYSV.001" },
         { label: "Mầu sắc, chất liệu", data: "Đen (Charcoal Black); vỏ nhôm mặt A" },
         { label: "Bộ vi xử lý", data: "Intel® Core™ i5-12450H (3.3GHz upto 4.4Ghz/12MB cache)" },
@@ -32,10 +32,17 @@ export default function Parameters() {
         { label: "Phụ kiện đi kèm", data: "Cable + Sạc" },
     ])
 
+    const [latestNews] = useState([
+        { images: "/images/LatestNew1.jpg", title: "Hướng dẫn cơ bản khi mua router trong năm 2023 - Sử dụng router WiFi có thể mở rộng", content: "Nếu bạn đang tìm kiếm một router có giá cả phải chăng, sử dụng được cho nhiều mục đích với hiệu năng vượt trội hoặc muốn tối ưu hóa router để chơi game, router ASUS chính là lựa chọn hàng đầu dành cho bạn." },
+        { images: "/images/LatestNew2.jpg", title: "Cách chọn màn hình phụ dành cho người sử dụng hệ sinh thái Apple", content: " Với ProArt, màn hình máy tính đồ họa chất lượng cao, giúp bạn có thể tận hưởng màu sắc tương đồng với hệ sinh thái Apple, tạo ra trải nghiệm hài hòa và chuyên nghiệp." },
+        { images: "/images/LatestNew3.jpg", title: "HACOM đồng hành cùng tiếp sức mùa thi 2023!", content: "HACOM Thanh Hóa đồng hành cùng các bạn sinh viên tiếp sức mùa thi năm 2023!" },
+        { images: "/images/LatestNew4.jpg", title: "SỞ HỮU BẢN QUYỀN WINRAR CỰC RẺ HỢP VÍ", content: "Hôm nay HACOM sẽ hướng dẫn các bạn cách mua bản quyền WinRAR chính hãng cho “Người Có Nhu Cầu”, với GIÁ CHỈ 80,000đ." }
+    ])
+
     return (
         <div className="parameters">
             <Comment />
-            <ParametersDetails parameter={parameter} />
+            <ParametersDetails parameter={parameter} latestNews={latestNews} />
         </div>
     )
 }

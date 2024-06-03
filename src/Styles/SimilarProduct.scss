@@ -1,0 +1,152 @@
+.similar-product {
+    width: 100%;
+
+    .menus {
+        display: flex;
+        justify-content: start;
+        border-bottom: 1px solid #eeeeee;
+
+        div {
+            width: 20%;
+            text-align: center;
+            padding: 10px 0px;
+            font-size: 18px;
+            font-weight: 700;
+            color: #1f67d2;
+            border-radius: 10px 10px 0px 0px;
+            cursor: pointer;
+        }
+
+        .setBG {
+            background-color: #1f67d2;
+            color: #fff;
+        }
+    }
+
+    .details-SM {
+        display: flex;
+        gap: 20px;
+        margin-top: 15px;
+
+        .SM {
+            width: 20%;
+            border: 1px solid #1f67d2;
+            border-radius: 10px;
+            height: fit-content;
+
+
+            .percent {
+                width: 100%;
+                display: flex;
+                justify-content: end;
+
+                div {
+                    font-weight: 700;
+                    color: #fff;
+                    text-align: center;
+                    background-color: red;
+                    width: 15%;
+                    padding: 2px;
+                    border-radius: 0px 10px 0px 10px;
+                }
+            }
+
+            img {
+                width: 300px;
+                height: 300px;
+            }
+
+            .installment {
+                background-color: #467bca;
+                color: #fff;
+                font-weight: bold;
+                width: 30%;
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                padding: 5px 10px;
+                border-radius: 0px 10px 0px 0px;
+            }
+
+            .details {
+                padding: 15px;
+                display: flex;
+
+                div {
+
+                    .star {
+                        display: flex;
+                        align-items: center;
+                        gap: 5px;
+                        font-size: 12px;
+
+                        .icon {
+                            color: #eeeeee;
+                        }
+                    }
+
+                    h5 {
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 2;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+
+                    .div-1 {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+
+                        div {
+                            position: relative;
+
+                            .promotion {
+                                color: #6782aa;
+                            }
+
+                            .promotion::before {
+                                content: "";
+                                position: absolute;
+                                top: 50%;
+                                left: 0;
+                                width: 62%;
+                                height: 1px;
+                                background-color: #6782aa;
+                                transform: translateY(50%);
+                            }
+                        }
+
+                        .cost {
+                            color: #1f67d2;
+                            font-size: 24px;
+                            font-weight: 700;
+                        }
+
+
+
+                        .check {
+                            color: rgb(44, 192, 103);
+                            display: flex;
+                            align-items: center;
+                        }
+
+                        .button {
+                            height: 100%;
+
+                            button {
+                                border: none;
+                                background-color: #f43453;
+                                color: #FFF;
+                                font-size: 24px;
+                                padding: 5px 8px;
+                                border-radius: 25px;
+                                height: 10%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

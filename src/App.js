@@ -3,6 +3,9 @@ import InformationNav from './Components/Header/InformationNav';
 import Menu from './Components/Menu/Menu';
 import ImageProduct from './Components/ProductDetails/ImageProduct';
 import Parameters from './Components/Parameters/Parameters';
+import SimilarProduct from './Components/SimilarProduct/SimilarProduct';
+import SubmitEmail from './Components/SubmitEmail/SubmitEmail';
+import Footer from './Components/Footer/Footer';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -28,6 +31,9 @@ function App() {
       <div className='body'>
         <ImageProduct />
         <Parameters />
+        <SimilarProduct />
+        <SubmitEmail />
+        <Footer />
       </div>
     </div>
   );
