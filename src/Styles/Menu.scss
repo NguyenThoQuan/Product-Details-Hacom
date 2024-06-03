@@ -1,9 +1,99 @@
+.sticky {
+    position: fixed;
+    top: 0%;
+    width: 100%;
+    background-color: #FFF;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 0px;
+
+    .search {
+        display: flex;
+        align-items: center;
+        background-color: #c1daff;
+        padding: 5px 5px 5px 15px;
+        border-radius: 20px;
+        width: 30%;
+
+        input {
+            border: none;
+            border-radius: 15px;
+            width: 100%;
+            background-color: #c1daff;
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        input::placeholder {
+            color: rgb(187, 187, 187);
+        }
+
+        .icon-search {
+            display: block;
+            background-color: #1f67d2;
+            color: #FFF;
+            padding: 5px 10px;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+    }
+
+    .personal {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30%;
+        gap: 35px;
+
+        .name-person {
+            position: absolute;
+            transform: translate(-50px, 35px);
+            background-color: #FFF;
+            color: #1436c1;
+            padding: 5px;
+            font-weight: 700;
+            box-shadow: 0px 4px 8px #eeeeee;
+        }
+
+        .cart {
+            display: flex;
+            align-items: center;
+
+            .quantity {
+                display: block;
+                background-color: red;
+                color: #FFF;
+                padding: 2px 8px;
+                border-radius: 30px;
+                font-weight: 700;
+                text-align: center;
+                transform: translate(-15px, -10px);
+            }
+
+            div {
+                color: #1436c1;
+            }
+        }
+
+        .icon-personal {
+            color: #1436c1;
+            font-size: 28px;
+            cursor: pointer;
+        }
+    }
+}
+
 .menu {
+    position: relative;
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 15px 0px;
     border-bottom: 1px solid black;
+    transition: all 0.3s ease;
 
     .search {
         display: flex;
