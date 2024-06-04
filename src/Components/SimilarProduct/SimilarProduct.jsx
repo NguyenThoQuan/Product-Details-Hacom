@@ -46,7 +46,7 @@ export default function SimilarProduct() {
                 <button onClick={scrollLeft} disabled={startIndex === 0}><ChevronLeft className='icon' /></button>
                 {
                     similarProduct && similarProduct.slice(startIndex, startIndex + 4).map((item, index, array) => (
-                        <div key={index} className="SM" onMouseEnter={() => setHoveredProduct(item)} onMouseLeave={() => setHoveredProduct(item)}>
+                        <div key={index} className="SM" onMouseEnter={() => setHoveredProduct(item)} onMouseLeave={() => setHoveredProduct(null)}>
                             <div className="percent">
                                 <div>{item.percent}</div>
                             </div>
