@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import HoverSimilar from "./HoverSimilar";
-import { Calendar3Event, StarFill, Check, Handbag } from "react-bootstrap-icons";
+import { Calendar3Event, StarFill, Check, Handbag, ChevronLeft, ChevronRight } from "react-bootstrap-icons";
 import "../../Styles/SimilarProduct.scss";
 
 export default function SimilarProduct() {
@@ -9,7 +9,12 @@ export default function SimilarProduct() {
         { percent: "-33%", images: "/images/SP2.png", name: "Laptop Acer Gaming Aspire 7 A715-43G-R8GA (NH.QHDSV.002) (R5 5625U/8GB RAM/512GB SSD/15.6 inch FHD 144Hz/RTX3050 4G/Win11/Đen) ", promotion: "23.999.000 đ", cost: "15.999.000 đ" },
         { percent: "-9%", images: "/images/SP3.jpg", name: "Laptop Acer Gaming Aspire 7 A715-76G-5806 (NH.QMFSV.002) (i5 12450H/16GB RAM/512GB SSD/RTX 3050 4G/15.6 inch FHD 144Hz/Win11/Đen/Vỏ nhôm) ", promotion: "22.999.000 đ", cost: "20.999.000 đ" },
         { percent: "-28%", images: "/images/SP4.jpg", name: "Màn hình VSP CM2701B (27 inch/FHD/VA/75Hz/5ms/Cong/Đen)", promotion: "3.999.000 đ", cost: "2.899.000 đ" },
+        { percent: "-29%", images: "/images/SP4.jpg", name: "Màn hình VSP CM2701B (27 inch/FHD/VA/75Hz/5ms/Cong/Đen)", promotion: "4.099.000 đ", cost: "2.999.000 đ" },
+        { percent: "-30%", images: "/images/SP4.jpg", name: "Màn hình VSP CM2701B (27 inch/FHD/VA/75Hz/5ms/Cong/Đen)", promotion: "4.199.000 đ", cost: "3.099.000 đ" },
+        { percent: "-31%", images: "/images/SP4.jpg", name: "Màn hình VSP CM2701B (27 inch/FHD/VA/75Hz/5ms/Cong/Đen)", promotion: "4.299.000 đ", cost: "3.199.000 đ" },
     ])
+
+    const [startIndex, setStartIndex] = useState(0);
 
     const [clickOption, setClickOption] = useState(false);
 
@@ -19,6 +24,18 @@ export default function SimilarProduct() {
         setClickOption(!clickOption);
     }
 
+    const scrollLeft = () => {
+        if (startIndex > 0) {
+            setStartIndex(startIndex - 1);
+        }
+    };
+
+    const scrollRight = () => {
+        if (startIndex < similarProduct.length - 4) {
+            setStartIndex(startIndex + 1);
+        }
+    };
+
     return (
         <div className="similar-product">
             <div className="menus">
@@ -26,8 +43,9 @@ export default function SimilarProduct() {
                 <div onClick={handleClickOption} className={clickOption ? "setBG" : ""}>SẢN PHẨM ĐÃ XEM</div>
             </div>
             <div className="details-SM">
+                <button onClick={scrollLeft} disabled={startIndex === 0}><ChevronLeft className='icon' /></button>
                 {
-                    similarProduct && similarProduct.map((item, index) => (
+                    similarProduct && similarProduct.slice(startIndex, startIndex + 4).map((item, index) => (
                         <div key={index} className="SM" onMouseEnter={() => setHoveredProduct(item)} onMouseLeave={() => setHoveredProduct(null)}>
                             <div className="percent">
                                 <div>{item.percent}</div>
@@ -52,6 +70,7 @@ export default function SimilarProduct() {
                         </div>
                     ))
                 }
+                <button onClick={scrollRight} disabled={startIndex >= similarProduct.length - 1}><ChevronRight className='icon' /></button>
             </div>
         </div>
     )
