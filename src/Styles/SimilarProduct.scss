@@ -24,6 +24,7 @@
     }
 
     .details-SM {
+        position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -169,6 +170,56 @@
                 position: fixed;
                 top: 13%;
                 z-index: 1000;
+
+                .hover-similar-left {
+                    width: 320px;
+                    border: 1px solid black;
+                    border-radius: 15px;
+                    background-color: #FFF;
+                    transform: translateX(-320px);
+
+                    .name {
+                        display: inline-block;
+                        background: linear-gradient(90deg, #1f67d2, #f43453);
+                        border-radius: 15px 15px 0px 0px;
+                        padding: 15px 10px;
+                        color: #FFF;
+                        font-weight: 700;
+                    }
+
+                    .hover-details {
+                        padding: 15px 15px;
+
+                        .span-1,
+                        .span-3,
+                        .span-5 {
+                            font-weight: 700;
+                        }
+
+                        .span-4 {
+                            font-weight: 700;
+                            color: #f43453;
+                        }
+
+                        .vat {
+                            font-size: 10px;
+                        }
+                    }
+
+                    .title {
+                        width: 55%;
+                        margin: 0px 15px;
+                        color: #FFF;
+                        background-color: #1f67d2;
+                        padding: 5px 15px;
+                        border-radius: 10px;
+                    }
+
+                    .info-product {
+                        padding: 5px 15px;
+                        font-size: 12px;
+                    }
+                }
 
                 .hover-similar-content {
                     width: 320px;

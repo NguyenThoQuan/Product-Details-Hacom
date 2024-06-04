@@ -1,10 +1,10 @@
 import React from "react";
 import { Stack } from "react-bootstrap-icons";
 
-export default function HoverSimilar({ product }) {
+export default function HoverSimilar({ product, isLastItem }) {
     return (
         <div className="hover-similar">
-            <div className="hover-similar-content">
+            <div className={`${isLastItem ? 'hover-similar-left' : 'hover-similar-content'}`}>
                 <span className="name">{product.name}</span>
                 <div className="hover-details">
                     <span className="span-1">- Giá bán:</span><span> {product.promotion}</span><br />

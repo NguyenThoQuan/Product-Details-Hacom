@@ -45,8 +45,8 @@ export default function SimilarProduct() {
             <div className="details-SM">
                 <button onClick={scrollLeft} disabled={startIndex === 0}><ChevronLeft className='icon' /></button>
                 {
-                    similarProduct && similarProduct.slice(startIndex, startIndex + 4).map((item, index) => (
-                        <div key={index} className="SM" onMouseEnter={() => setHoveredProduct(item)} onMouseLeave={() => setHoveredProduct(null)}>
+                    similarProduct && similarProduct.slice(startIndex, startIndex + 4).map((item, index, array) => (
+                        <div key={index} className="SM" onMouseEnter={() => setHoveredProduct(item)} onMouseLeave={() => setHoveredProduct(item)}>
                             <div className="percent">
                                 <div>{item.percent}</div>
                             </div>
@@ -66,7 +66,7 @@ export default function SimilarProduct() {
                                     </div>
                                 </div>
                             </div>
-                            {hoveredProduct === item && <HoverSimilar product={item} />}
+                            {hoveredProduct === item && <HoverSimilar product={item} isLastItem={index === array.length - 1} />}
                         </div>
                     ))
                 }

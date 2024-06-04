@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Heart, HeartFill, Handbag, Plus, Dash } from "react-bootstrap-icons";
 import { toast } from "react-toastify";
 
@@ -12,10 +12,21 @@ export default function Buy() {
         }
     }
 
+    useEffect(() => {
+        if (!localStorage.getItem("promotion") && !localStorage.getItem("quantity")) {
+            localStorage.setItem("promotion", "0");
+            localStorage.setItem("quantity", "0");
+        }
+    }, [])
+
     const handleAddCart = () => {
-        localStorage.setItem("promotion", "17.999.000đ");
-        localStorage.setItem("quantity", "1");
-        toast.success("Thêm vào giỏ hàng thành công !!!")
+        if (localStorage.getItem("promotion") && localStorage.getItem("quantity")) {
+            localStorage.setItem("promotion", "17.999.000");
+            localStorage.setItem("quantity", "1");
+            toast.success("Thêm vào giỏ hàng thành công !!!")
+        } else {
+
+        }
     }
 
     return (
